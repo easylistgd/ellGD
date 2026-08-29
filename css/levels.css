@@ -1,0 +1,520 @@
+
+/* =========================
+   LEVELS PAGE
+========================= */
+
+.levels-page {
+    width: min(1100px, calc(100% - 60px));
+    margin: 80px auto 120px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.levels-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.levels-header h1 {
+    margin-top: 7px;
+    font-size: clamp(38px, 5vw, 58px);
+    letter-spacing: -2.5px;
+    font-weight: 900;
+}
+
+.levels-header p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.level-count {
+    min-width: 130px;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background: var(--panel);
+}
+
+.level-count span {
+    color: var(--muted);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.level-count strong {
+    margin: 3px 0;
+
+    font-size: 27px;
+    font-weight: 900;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.level-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    flex: 1;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    transition: 0.2s ease;
+}
+
+.search-box:focus-within {
+    border-color: rgba(124,92,255,0.5);
+
+    box-shadow:
+        0 0 0 3px rgba(124,92,255,0.08);
+}
+
+.search-icon {
+    margin-right: 10px;
+
+    color: var(--accent-light);
+
+    font-weight: 900;
+}
+
+.search-box input {
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.search-box input::placeholder {
+    color: #666d82;
+}
+
+.search-key {
+    padding: 5px 7px;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    color: #666d82;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.filters {
+    display: flex;
+    gap: 5px;
+
+    padding: 5px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.025);
+}
+
+.filter {
+    border: none;
+
+    padding: 0 14px;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.filter:hover {
+    color: white;
+}
+
+.filter.active {
+    background: rgba(124,92,255,0.15);
+    color: white;
+}
+
+
+/* =========================
+   LEVEL ROW
+========================= */
+
+.levels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.level-row {
+    min-height: 86px;
+
+    display: grid;
+
+    grid-template-columns:
+        65px
+        76px
+        minmax(200px, 1fr)
+        120px
+        90px;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 10px 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025),
+            rgba(124,92,255,0.025)
+        );
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+    animation: levelAppear 0.35s ease both;
+}
+
+.level-row:hover {
+    transform: translateX(4px);
+
+    border-color: rgba(124,92,255,0.3);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(124,92,255,0.08),
+            rgba(255,255,255,0.035)
+        );
+}
+
+@keyframes levelAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   RANK
+========================= */
+
+.level-rank {
+    font-size: 19px;
+
+    font-weight: 900;
+
+    letter-spacing: -0.5px;
+}
+
+.level-rank span {
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    margin-left: 2px;
+}
+
+
+/* =========================
+   THUMBNAIL
+========================= */
+
+.level-thumbnail {
+    width: 76px;
+    height: 55px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17152b,
+            #29204d
+        );
+
+    border: 1px solid var(--border);
+
+    position: relative;
+}
+
+.level-thumbnail::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 40%,
+            rgba(255,255,255,0.08)
+        );
+}
+
+.level-thumbnail img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   LEVEL INFO
+========================= */
+
+.level-name {
+    font-size: 14px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.level-creator {
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.level-id {
+    margin-left: 7px;
+
+    color: #666d82;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   DIFFICULTY
+========================= */
+
+.level-difficulty {
+    justify-self: start;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    background: rgba(124,92,255,0.1);
+
+    border: 1px solid rgba(124,92,255,0.16);
+
+    color: var(--accent-light);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   POINTS
+========================= */
+
+.level-points {
+    text-align: right;
+}
+
+.level-points strong {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+.level-points span {
+    color: var(--muted);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    padding: 90px 20px;
+}
+
+.no-results.show {
+    display: block;
+}
+
+.no-results-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    color: var(--accent-light);
+
+    font-weight: 900;
+}
+
+.no-results h2 {
+    margin-top: 15px;
+
+    font-size: 20px;
+}
+
+.no-results p {
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .levels-header {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .level-controls {
+        flex-direction: column;
+    }
+
+    .filters {
+        height: 45px;
+    }
+
+    .filter {
+        flex: 1;
+    }
+
+    .level-row {
+        grid-template-columns:
+            45px
+            65px
+            1fr;
+
+        gap: 12px;
+    }
+
+    .level-thumbnail {
+        width: 65px;
+        height: 48px;
+    }
+
+    .level-difficulty,
+    .level-points {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .levels-page {
+        width: calc(100% - 25px);
+    }
+
+    .search-key {
+        display: none;
+    }
+
+    .level-row {
+        padding: 10px;
+    }
+
+}
+

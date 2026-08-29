@@ -1,0 +1,191 @@
+/* ================================
+RULES PAGE
+================================ */
+
+.rules-page {
+min-height: 100vh;
+padding: 140px 6% 80px;
+}
+
+/* HEADER */
+
+.rules-header {
+text-align: center;
+max-width: 800px;
+margin: 0 auto 65px;
+}
+
+.rules-header h1 {
+margin: 20px 0 15px;
+
+```
+color: white;
+
+font-size: clamp(48px, 7vw, 82px);
+font-weight: 900;
+
+letter-spacing: -4px;
+```
+
+}
+
+.rules-header h1 span {
+background: linear-gradient(90deg, #8c7cff, #58d9ff);
+
+```
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+```
+
+}
+
+.rules-header p {
+color: #9696a7;
+
+```
+font-size: 18px;
+line-height: 1.6;
+```
+
+}
+
+/* RULES */
+
+.rules-container {
+max-width: 950px;
+
+```
+margin: 0 auto;
+
+display: flex;
+flex-direction: column;
+
+gap: 16px;
+```
+
+}
+
+/* CARD */
+
+.rule-card {
+display: grid;
+
+```
+grid-template-columns: 90px 1fr;
+
+gap: 25px;
+
+padding: 30px;
+
+border-radius: 22px;
+
+border: 1px solid rgba(255, 255, 255, 0.07);
+
+background: rgba(255, 255, 255, 0.035);
+
+backdrop-filter: blur(15px);
+
+transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+```
+
+}
+
+.rule-card:hover {
+transform: translateX(7px);
+
+```
+background: rgba(255, 255, 255, 0.06);
+
+border-color: rgba(130, 110, 255, 0.3);
+```
+
+}
+
+/* NUMBER */
+
+.rule-number {
+font-size: 28px;
+
+```
+font-weight: 900;
+
+color: #8175e8;
+
+opacity: 0.8;
+```
+
+}
+
+/* CONTENT */
+
+.rule-content {
+max-width: 700px;
+}
+
+.rule-label {
+color: #77778a;
+
+```
+font-size: 11px;
+
+font-weight: 800;
+
+letter-spacing: 2px;
+```
+
+}
+
+.rule-content h2 {
+margin: 6px 0 10px;
+
+```
+color: white;
+
+font-size: 25px;
+```
+
+}
+
+.rule-content p {
+margin: 0;
+
+```
+color: #8c8c9c;
+
+font-size: 15px;
+
+line-height: 1.7;
+```
+
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+```
+.rules-page {
+    padding: 120px 5% 60px;
+}
+
+.rule-card {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    padding: 25px;
+}
+
+.rule-number {
+    font-size: 22px;
+}
+
+.rules-header h1 {
+    letter-spacing: -2px;
+}
+```
+
+}

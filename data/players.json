@@ -1,0 +1,37 @@
+[
+    {
+        "name": "PlayerOne",
+        "points": 15000,
+        "levelsCompleted": 120,
+        "country": "Saudi Arabia",
+        "avatar": "images/icons/default.png"
+    },
+    {
+        "name": "PlayerTwo",
+        "points": 13750,
+        "levelsCompleted": 108,
+        "country": "United States",
+        "avatar": "images/icons/default.png"
+    },
+    {
+        "name": "PlayerThree",
+        "points": 12900,
+        "levelsCompleted": 97,
+        "country": "United Kingdom",
+        "avatar": "images/icons/default.png"
+    },
+    {
+        "name": "PlayerFour",
+        "points": 11500,
+        "levelsCompleted": 89,
+        "country": "Canada",
+        "avatar": "images/icons/default.png"
+    },
+    {
+        "name": "PlayerFive",
+        "points": 10300,
+        "levelsCompleted": 81,
+        "country": "Germany",
+        "avatar": "images/icons/default.png"
+    }
+]
