@@ -748,3 +748,55 @@ footer {
 
     box-shadow: 0 10px 35px rgba(88,101,242,0.3);
 }
+
+```css
+/* Discord Page */
+
+.discord-page {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.discord-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(15, 18, 30, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.discord-card h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.discord-card p {
+    color: #aeb4c7;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.discord-button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    background: #5865F2;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.discord-button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+```
